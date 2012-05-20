@@ -26,16 +26,12 @@ public class MongoDbTest {
 	@Autowired
 	private OrderRepository orderRepository;
 
-	@Autowired
-	private RestaurantRepository restaurantRepository;
-
 	@Autowired MongoOperations mongoOps;
 	
 	@Before
 	public void cleanup() {
 		// Deleting all orders (just in case something is left over from a previous failed run)
 		orderRepository.deleteAll();
-		restaurantRepository.deleteAll();
 	}
 	
 	@Test
